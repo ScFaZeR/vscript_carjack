@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VScript Carjack - Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark-mode">
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-car-burst"></i>
+                    <span>VScript Carjack</span>
+                    <span class="version">v1.2.0</span>
+                </div>
+                <div class="header-controls">
+                    <button id="langToggle" class="control-btn" title="Switch Language">
+                        <img src="https://flagcdn.com/w40/fr.png" alt="Français" id="flagIcon">
+                    </button>
+                    <button id="themeToggle" class="control-btn" title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 data-en="Complete Documentation" data-fr="Documentation Complète">Documentation Complète</h1>
+            <p class="subtitle" data-en="Vehicle theft on order with cinematic call & GPS tracker"
+                data-fr="Vol de véhicule sur commande avec appel cinématique & traqueur GPS">
+                Vol de véhicule sur commande avec appel cinématique & traqueur GPS
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Installation -->
+        <section class="doc-section">
+            <h2><i class="fas fa-download"></i> <span data-en="Installation" data-fr="Installation">Installation</span>
+            </h2>
+            <div class="content-block">
+                <ol data-en="
+                    <li>Download vscript_carjack</li>
+                    <li>Drag the folder into your server's resources directory</li>
+                    <li>Add ensure vscript_carjack to your server.cfg</li>
+                    <li>Restart your server</li>
+                " data-fr="
+                    <li>Téléchargez vscript_carjack</li>
+                    <li>Glissez le dossier dans le répertoire resources de votre serveur</li>
+                    <li>Ajoutez ensure vscript_carjack à votre server.cfg</li>
+                    <li>Redémarrez votre serveur</li>
+                ">
+                    <li>Téléchargez vscript_carjack</li>
+                    <li>Glissez le dossier dans le répertoire resources de votre serveur</li>
+                    <li>Ajoutez ensure vscript_carjack à votre server.cfg</li>
+                    <li>Redémarrez votre serveur</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="doc-section">
+            <h2><i class="fas fa-star"></i> <span data-en="Features" data-fr="Fonctionnalités">Fonctionnalités</span>
+            </h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-film"></i>
+                    <h3 data-en="Cinematic Intro" data-fr="Intro Cinématique">Intro Cinématique</h3>
+                    <p data-en="Immersive phone call with camera sequences"
+                        data-fr="Appel téléphonique immersif avec séquences caméra">
+                        Appel téléphonique immersif avec séquences caméra
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-satellite-dish"></i>
+                    <h3 data-en="GPS Tracker" data-fr="Traqueur GPS">Traqueur GPS</h3>
+                    <p data-en="Beeping tracker revealing position to police"
+                        data-fr="Traqueur avec bips révélant la position à la police">
+                        Traqueur avec bips révélant la position à la police
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-user-ninja"></i>
+                    <h3 data-en="Hack Garage" data-fr="Garage de Hack">Garage de Hack</h3>
+                    <p data-en="Mini-game to disable tracker before delivery"
+                        data-fr="Mini-jeu pour désactiver le traqueur avant livraison">
+                        Mini-jeu pour désactiver le traqueur avant livraison
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-server"></i>
+                    <h3 data-en="Multi-Framework" data-fr="Multi-Framework">Multi-Framework</h3>
+                    <p data-en="ESX, QB, Qbox & Standalone support" data-fr="Support ESX, QB, Qbox & Standalone">
+                        Support ESX, QB, Qbox & Standalone
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Configuration -->
+        <section class="doc-section">
+            <h2><i class="fas fa-cog"></i> <span data-en="Configuration" data-fr="Configuration">Configuration</span>
+            </h2>
+
+            <!-- General Settings -->
+            <div class="config-block">
+                <h3 data-en="General Settings" data-fr="Paramètres Généraux">Paramètres Généraux</h3>
+                <div class="code-block">
+                    <pre>Config.Inventory = 'auto'   -- auto, ox, ps, core
+Config.Dispatch = {
+    enabled = true,
+    system = 'lb-tablet',  -- lb-tablet, ps-dispatch, cd_dispatch, etc.
+    delay = 3,              -- Delay before police alert
+    maxHackAttempts = 2     -- Alert after X failed hacks
+}</pre>
+                </div>
+            </div>
+
+            <!-- Vehicles & Spawns -->
+            <div class="config-block">
+                <h3 data-en="Vehicles & Rewads" data-fr="Véhicules & Récompenses">Véhicules & Récompenses</h3>
+                <div class="code-block">
+                    <pre>Config.TargetVehicles = {
+    { model = `adder`,    plate = "LUXE001", value = 8000, name = "Adder" },
+    { model = `zentorno`, plate = "SPEED77", value = 7500, name = "Zentorno" },
+}
+
+Config.Pay = {
+    moneyType = 'black_money',
+    minHealthPercent = 0.3,
+    perfectBonus = 500,
+}</pre>
+                </div>
+                <p data-en="The reward depends on the vehicle health. Perfect state gives a bonus."
+                    data-fr="La récompense dépend de l'état du véhicule. Un état parfait donne un bonus.">
+                    La récompense dépend de l'état du véhicule. Un état parfait donne un bonus.
+                </p>
+            </div>
+
+            <!-- Customization Info -->
+            <div class="config-block">
+                <h3 data-en="Advanced Customization" data-fr="Customisation Avancée">Customisation Avancée</h3>
+
+                <h4 style="color: var(--accent); margin-top: 15px;">1. Bridge System</h4>
+                <p data-en="The script uses a bridge to handle items and money across frameworks."
+                    data-fr="Le script utilise un bridge pour gérer les items et l'argent sur tous les frameworks.">
+                    Le script utilise un bridge pour gérer les items et l'argent sur tous les frameworks.
+                </p>
+                <div class="code-block">
+                    <pre>-- customization/inventory.lua
+function Bridge.AddItem(source, item, count)
+    -- Your inventory logic here
+end</pre>
+                </div>
+
+                <h4 style="color: var(--accent); margin-top: 15px;">2. Dispatch Bridge</h4>
+                <p data-en="Customize how police alerts are sent in customization/dispatch.lua."
+                    data-fr="Personnalisez l'envoi des alertes police dans customization/dispatch.lua.">
+                    Personnalisez l'envoi des alertes police dans <code>customization/dispatch.lua</code>.
+                </p>
+            </div>
+        </section>
+
+        <!-- Usage -->
+        <section class="doc-section">
+            <h2><i class="fas fa-gamepad"></i> <span data-en="How to Use" data-fr="Utilisation">Utilisation</span></h2>
+            <div class="usage-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4 data-en="Start the Mission" data-fr="Lancer la Mission">Lancer la Mission</h4>
+                        <p data-en="Interact with the phone booth to receive your order. A cinematic sequence will play."
+                            data-fr="Interagissez avec la cabine téléphonique pour recevoir votre commande. Une cinématique se lance.">
+                            Interagissez avec la cabine téléphonique pour recevoir votre commande. Une cinématique se lance.
+                        </p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4 data-en="Find & Steal" data-fr="Trouver & Voler">Trouver & Voler</h4>
+                        <p data-en="Find the vehicle in the search zone. Stealing it will trigger the GPS tracker."
+                            data-fr="Trouvez le véhicule dans la zone. Le voler déclenchera le traqueur GPS.">
+                            Trouvez le véhicule dans la zone. Le voler déclenchera le traqueur GPS.
+                        </p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4 data-en="Disable GPS" data-fr="Désactiver le GPS">Désactiver le GPS</h4>
+                        <p data-en="Rush to the hack garage. Complete the mini-game to stop sending your position to cops."
+                            data-fr="Foncez au garage de hack. Réussissez le mini-jeu pour arrêter d'envoyer votre position.">
+                            Foncez au garage de hack. Réussissez le mini-jeu pour arrêter d'envoyer votre position.
+                        </p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4 data-en="Delivery" data-fr="Livraison">Livraison</h4>
+                        <p data-en="Go to the delivery point and give the vehicle to the contact to get paid."
+                            data-fr="Allez au point de livraison et donnez le véhicule au contact pour être payé.">
+                            Allez au point de livraison et donnez le véhicule au contact pour être payé.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Troubleshooting -->
+        <section class="doc-section">
+            <h2><i class="fas fa-wrench"></i> <span data-en="Troubleshooting" data-fr="Dépannage">Dépannage</span></h2>
+            <div class="faq">
+                <div class="faq-item">
+                    <h4 data-en="The cinematic feels broken" data-fr="La cinématique semble cassée">La cinématique semble cassée</h4>
+                    <p data-en="
+                        • Ensure you haven't moved the phone booth coordinates in client/main.lua
+                        • Check if another script is conflicting with camera controls
+                    " data-fr="
+                        • Vérifiez que vous n'avez pas déplacé les coordonnées de la cabine dans client/main.lua
+                        • Vérifiez si un autre script entre en conflit avec le contrôle des caméras
+                    ">
+                        • Vérifiez que vous n'avez pas déplacé les coordonnées de la cabine dans <code>client/main.lua</code>
+                        • Vérifiez si un autre script entre en conflit avec le contrôle des caméras
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h4 data-en="Dispatch alerts don't show model/plate" data-fr="Les alertes ne montrent pas le modèle/plaque">Les alertes ne montrent pas le modèle/plaque</h4>
+                    <p data-en="
+                        • Ensure you are using a compatible dispatch system (like lb-tablet or ps-dispatch)
+                        • Check customization/dispatch.lua for correct mapping
+                    " data-fr="
+                        • Vérifiez que vous utilisez un système de dispatch compatible (comme lb-tablet ou ps-dispatch)
+                        • Vérifiez le mappage dans customization/dispatch.lua
+                    ">
+                        • Vérifiez que vous utilisez un système de dispatch compatible (comme <code>lb-tablet</code> ou <code>ps-dispatch</code>)
+                        • Vérifiez le mappage dans <code>customization/dispatch.lua</code>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support -->
+        <section class="doc-section">
+            <h2><i class="fas fa-life-ring"></i> <span data-en="Support" data-fr="Support">Support</span></h2>
+            <div class="content-block">
+                <p data-en="Need help with vscript_carjack? Join the Discord." data-fr="Besoin d'aide avec vscript_carjack ? Rejoignez le Discord.">
+                    Besoin d'aide avec vscript_carjack ? Rejoignez le Discord.
+                </p>
+                <div class="support-links">
+                    <a href="https://discord.gg/MsguHxUfGX" class="support-btn discord">
+                        <i class="fab fa-discord"></i>
+                        <span data-en="Join Discord" data-fr="Rejoindre Discord">Rejoindre Discord</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 VScript. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
